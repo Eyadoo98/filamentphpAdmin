@@ -9,11 +9,18 @@ use Filament\Resources\Pages\ListRecords;
 class ListUsers extends ListRecords
 {
     protected static string $resource = UserResource::class;
+    protected $listeners = ['setStatusFilter' => 'updateTableFilters'];
 
     protected function getActions(): array
     {
         return [
             Actions\CreateAction::make(),
         ];
+    }
+
+    public function updateTableFilters($status)
+    {
+        dd('sss');
+//        $this->filters['status'] = $status;
     }
 }

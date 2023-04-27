@@ -75,6 +75,8 @@ class CityResource extends Resource
             'index' => Pages\ListCities::route('/'),
             'create' => Pages\CreateCity::route('/create'),
             'edit' => Pages\EditCity::route('/{record}/edit'),
+            'view' => Pages\ViewUser::route('/{record}'),
         ];
     }
+
 }
